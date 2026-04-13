@@ -16,13 +16,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
 
       - name: Run unit & component test
-        run: npm test
+        run: npm test -- --watchAll=false
 
       - name: Run Cypress E2E
+        env:
+          BROWSER: none
         run: npx start-server-and-test start http://localhost:3000 "npx cypress run"
