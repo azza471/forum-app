@@ -1,8 +1,8 @@
 describe("Forum App E2E Test - The Ultimate Journey", () => {
   const timestamp = Date.now();
   const newUser = {
-    name: "Leon Duta",
-    email: `leon.${timestamp}@gmail.com`,
+    name: "Test Forum",
+    email: `test.${timestamp}@gmail.com`,
     password: "password123",
   };
 
