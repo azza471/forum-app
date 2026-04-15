@@ -63,7 +63,7 @@ describe("Forum App E2E Test - The Ultimate Journey", () => {
     cy.get("textarea").type(threadData.comment);
     cy.get('button[type="submit"]').click();
 
-    // Verifikasi Akhir: Memastikan komentar berhasil tersimpan dan tampil di UI
+    // Verifikasi Akhir: Memastikan komentar berhasil tersimpan dan tampil
     cy.contains(threadData.comment).should("be.visible");
   });
 });
